@@ -30,7 +30,7 @@
       </div>
     </div>
     <section class="min-h-screen flex flex-col items-center py-20 bg-white">
-      <div class="container justify-center">
+      <div class="container flex flex-col justify-center">
         <h2 class="bg-primary text-white text-4xl font-bold text-center py-3 rounded-xl">Berita <span
             class="font-medium">terbaru</span></h2>
         <div class="mt-3">
@@ -60,21 +60,27 @@
         <NuxtLink to="/galeri" class="btn w-fit bg-primary text-white">Lihat Selengkapnya</NuxtLink>
       </div>
     </section>
-    <section class="min-h-screen flex justify-center bg-gray-300 py-20 overflow-x-hidden">
+    <section class="min-h-screen flex justify-center bg-gray-700 py-20 overflow-x-hidden">
       <div class="flex flex-col gap-y-5">
-        <h2 class="text-base-content text-4xl font-bold text-center">Jurusan</h2>
+        <h2 class="text-4xl font-bold text-center">Jurusan</h2>
         <div class="flex flex-grow items-center gap-x-40" ref="major">
           <div v-for="major in majors" class="major flex flex-col flex-1 items-center">
             <NuxtImg :src="major.img" width="200" />
-            <div class="text-base-content text-xl text-center">{{ major.name }}</div>
+            <div class="text-xl text-center">{{ major.name }}</div>
           </div>
         </div>
       </div>
     </section>
-    <section class="min-h-screen flex justify-center bg-base-100 py-20">
-      <div class="container flex gap-y-5">
-        <h2 class="text-base-content text-4xl font-bold text-center">Jumlah Guru</h2>
-        <h2 class="text-base-content text-4xl font-bold text-center">Jumlah Siswa</h2>
+    <section class="flex justify-center bg-gray-300 text-black py-20">
+      <div class="container grid grid-cols-2 gap-x-3 gap-y-5">
+        <div class="bg-primary rounded-xl p-3">
+          <h2 class="text-4xl text-gray-400 font-bold text-center mb-2">Jumlah Guru</h2>
+          <div class="text-white text-center text-3xl">60</div>
+        </div>
+        <div class="bg-primary rounded-xl p-3">
+          <h2 class="text-4xl text-gray-400 font-bold text-center mb-2">Jumlah Siswa</h2>
+          <div class="text-white text-center text-3xl">1116</div>
+        </div>
       </div>
     </section>
   </div>
